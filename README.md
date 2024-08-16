@@ -1,6 +1,9 @@
+# Fixed fork of https://github.com/garmeeh/local-cors-proxy
+
 # Local CORS Proxy
 
-Simple proxy to bypass CORS issues. This was built as a local dev only solution to enable prototyping against existing APIs without having to worry about CORS.
+Simple proxy to bypass CORS issues. This was built as a local dev only solution
+to enable prototyping against existing APIs without having to worry about CORS.
 
 This module was built to solve the issue of getting this error:
 
@@ -34,14 +37,16 @@ Then in your client code, new API endpoint:
 http://localhost:8010/proxy/movies/list
 ```
 
-End result will be a request to `https://www.yourdomain.ie/movies/list` without the CORS issues!
+End result will be a request to `https://www.yourdomain.ie/movies/list` without
+the CORS issues!
 
-Alternatively you can install the package locally and add a script to your project:
+Alternatively you can install the package locally and add a script to your
+project:
 
 ```json
- "scripts": {
-   "proxy": "lcp --proxyUrl https://www.yourdomain.ie"
- }
+"scripts": {
+  "proxy": "lcp --proxyUrl https://www.yourdomain.ie"
+}
 ```
 
 ## Options
