@@ -1,20 +1,19 @@
 {
-  "name": "local-cors-proxy",
-  "version": "1.1.0",
+  "name": "proxy-cors-cli",
+  "version": "1.2.0",
   "main": "./lib/index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./bin/lcp.js",
-    "test": "echo \"No tests specified\" && exit 0"
+    "start": "node ./bin/pcc.js"
   },
   "bin": {
-    "lcp": "./bin/lcp.js"
+    "lcp": "./bin/pcc.js"
   },
-  "author": "Gary Meehan",
+  "author": "Vladislav Pozdeev",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garmeeh/local-cors-proxy.git"
+    "url": "git+https://github.com/wennerryle/proxy-cors-cli.git"
   },
   "keywords": [
     "cors",
@@ -24,12 +23,12 @@
     "express"
   ],
   "bugs": {
-    "url": "https://github.com/garmeeh/local-cors-proxy/issues"
+    "url": "https://github.com/wennerryle/proxy-cors-cliissues"
   },
-  "homepage": "https://github.com/garmeeh/local-cors-proxy#readme",
+  "homepage": "https://github.com/wennerryle/proxy-cors-cli#readme",
   "dependencies": {
-    "chalk": "^2.3.2",
-    "cors": "^2.8.4",
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "http-proxy-middleware": "^3.0.0",
     "yargs": "^17.7.2"

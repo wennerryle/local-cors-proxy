@@ -1,6 +1,10 @@
-# Fixed fork of https://github.com/garmeeh/local-cors-proxy
+# Proxy CORS CLI
 
-# Local CORS Proxy
+_not recommended for production_
+
+#### Fixed fork from https://github.com/garmeeh/local-cors-proxy
+
+(has volnurabilities and not support WebDAV)
 
 Simple proxy to bypass CORS issues. This was built as a local dev only solution
 to enable prototyping against existing APIs without having to worry about CORS.
@@ -13,48 +17,54 @@ No 'Access-Control-Allow-Origin' header is present on the requested resource. Or
 
 ## Getting Started
 
-```
-npm install -g local-cors-proxy
-```
+Install it globally if you like use it like CLI
 
-**Simple Example**
-
-API endpoint that we want to request that has CORS issues:
-
-```
-https://www.yourdomain.ie/movies/list
+```bash
+npm i -g proxy-cors-cli
 ```
 
-Start Proxy:
+---
 
-```
-lcp --proxyUrl https://www.yourdomain.ie
-```
+or
 
-Then in your client code, new API endpoint:
+Install it for project if you like npm commands
 
-```
-http://localhost:8010/proxy/movies/list
+```bash
+npm i -D proxy-cors-cli
 ```
 
-End result will be a request to `https://www.yourdomain.ie/movies/list` without
-the CORS issues!
+You can use it in the scripts section of package.json.
 
-Alternatively you can install the package locally and add a script to your
-project:
+For example:
 
 ```json
-"scripts": {
-  "proxy": "lcp --proxyUrl https://www.yourdomain.ie"
+{
+  "...": "...",
+  "scripts": {
+    "dev:corsproxy": "pcc -p http://192.168.4.1 -P 7244"
+  }
 }
 ```
 
-## Options
+## CLI
 
-| Option         | Example               | Default |
-| -------------- | --------------------- | ------: |
-| --proxyUrl     | https://www.google.ie |         |
-| --proxyPartial | foo                   |   proxy |
-| --port         | 8010                  |    8010 |
-| --credentials  | (no value needed)     |   false |
-| --origin       | http://localhost:4200 |       * |
+```bash
+$ pcc --help
+Usage: lcp --proxyUrl <your_proxy_url>
+Usage: lcp -p <your_proxy_url>
+
+Options:
+      --help             Show help                                     [boolean]
+      --version          Show version number                           [boolean]
+  -p, --proxyUrl         The URL for proxying.                        [required]
+  -P, --port             Port for the server.
+  -o, --origin           Set Access-Control-Allow-Origin header.
+  -c, --credentials      Set Access-Control-Allow-Credentials header to true
+                                                                       [boolean]
+      --ed, --enableDav  Support for WebDAV, CardDAV HTTP methods      [boolean]
+
+Examples:
+  -p  https://www.google.com
+  -P  8010
+  -o  http://localhost:4200
+```
