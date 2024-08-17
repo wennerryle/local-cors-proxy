@@ -23,7 +23,7 @@
     "express"
   ],
   "bugs": {
-    "url": "https://github.com/wennerryle/proxy-cors-cliissues"
+    "url": "https://github.com/wennerryle/proxy-cors-cli/issues"
   },
   "homepage": "https://github.com/wennerryle/proxy-cors-cli#readme",
   "dependencies": {
