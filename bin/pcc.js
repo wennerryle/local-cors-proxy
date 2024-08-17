@@ -9,8 +9,8 @@ const argsBuilder = yargs(hideBin(process.argv));
 
 // prettier-ignore
 const args = await argsBuilder
-  .usage    ("Usage: lcp --proxyUrl <your_proxy_url>")
-  .usage    ("Usage: lcp -p <your_proxy_url>")
+  .usage    ("Usage: pсс --proxyUrl <your_proxy_url>")
+  .usage    ("Usage: pcc -p <your_proxy_url>")
   // PROXY URL
   .alias       ("p" , "proxyUrl")
   .describe    ("p" , "The URL for proxying.")
