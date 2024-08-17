@@ -11,6 +11,9 @@
   },
   "author": "Vladislav Pozdeev",
   "license": "MIT",
+  "publishConfig": {
+    "@wennerryle:registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wennerryle/proxy-cors-cli.git"
