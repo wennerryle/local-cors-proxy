@@ -1,13 +1,13 @@
 {
   "name": "proxy-cors-cli",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "./lib/index.js",
   "type": "module",
   "scripts": {
     "start": "node ./bin/pcc.js"
   },
   "bin": {
-    "lcp": "./bin/pcc.js"
+    "pcc": "./bin/pcc.js"
   },
   "author": "Vladislav Pozdeev",
   "license": "MIT",

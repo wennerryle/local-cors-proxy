@@ -50,8 +50,8 @@ For example:
 
 ```bash
 $ pcc --help
-Usage: lcp --proxyUrl <your_proxy_url>
-Usage: lcp -p <your_proxy_url>
+Usage: pcc --proxyUrl <your_proxy_url>
+Usage: pcc -p <your_proxy_url>
 
 Options:
       --help             Show help                                     [boolean]
